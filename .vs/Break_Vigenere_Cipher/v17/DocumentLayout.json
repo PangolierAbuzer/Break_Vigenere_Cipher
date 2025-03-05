@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\uses_things.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Vigenere_cipher\\uses_things.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\Vigenere_cipher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Vigenere_cipher\\Vigenere_cipher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "uses_things.h",
+              "DocumentMoniker": "D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\uses_things.h",
+              "RelativeDocumentMoniker": "Vigenere_cipher\\uses_things.h",
+              "ToolTip": "D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\uses_things.h",
+              "RelativeToolTip": "Vigenere_cipher\\uses_things.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T15:36:27.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vigenere_cipher.cpp",
+              "DocumentMoniker": "D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\Vigenere_cipher.cpp",
+              "RelativeDocumentMoniker": "Vigenere_cipher\\Vigenere_cipher.cpp",
+              "ToolTip": "D:\\C\u002B\u002B projects\\Break_Vigenere_Cipher\\Vigenere_cipher\\Vigenere_cipher.cpp",
+              "RelativeToolTip": "Vigenere_cipher\\Vigenere_cipher.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T15:36:26.55Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
