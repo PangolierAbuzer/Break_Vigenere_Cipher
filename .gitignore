@@ -1,0 +1,13 @@
+.vs/
+*.suo
+*.user
+*.vcxproj.filters
+*.vcxproj.user
+ipch/
+*.sdf
+*.opensdf
+Release/
+Debug/
+x64/
+obj/
+[Bb]in/
