@@ -10,6 +10,8 @@
 #include <string>
 #include <map>
 #include <typeinfo>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -38,37 +40,67 @@ string msg = R"(к.аижтъе.риёвмщужйяээмфуннолемщук
 шсвхюжжпфмосояп.жхжлак,кбфжцжтеёкижундхвй.лшэ)";
 
 
-// функция для подсчета кол-ва символов в сообщении (с сортировкой по кол-ву)
-static const vector<pair<char, int>> assembling()
+// static функция для подсчета частоты каждого символа в сообщении (с сортировкой по значениям)
+static vector<pair<char, double>> assembling() // Теперь сразу double
 {
-	map<char, int> assembling_values; // объект для хранения
+	vector<pair<char, double>> sorted_assembling_values; // Создаем и инициализируем вектор пар 
 
-
-	// для каждого символа алфавита пробегаемся по всей строке и считаем кол-во
+	// для каждого символа алфавита пробегаемся по всему сообщению и считаем кол-во этих символов
 	for (int i = 0; i < alphabet.size(); i++)
 	{
-		int count = 0;
+		double count = 0; // Используем double для count
 		for (int j = 0; j < msg.length(); j++)
 		{
 			if (alphabet[i] == msg[j])
 				count++;
 		}
-		assembling_values.emplace(alphabet[i], count); // добавляем ключ и значение каждого символа
+		sorted_assembling_values.push_back(make_pair(alphabet[i], count / msg.length())); // добавляем ключ и значение для каждого символа, сразу делим
 	}
 
-
-	// Создаем и инициализируем вектор пар 
-	// (по сути тот же мап, но который можно сортировать)
-	vector<pair<char, int>> sorted_assembling_values
-	(assembling_values.begin(), assembling_values.end());
-
-	// лямбда-функция сортировки по значениям (как-то вроде работает)
+	// лямбда-функция сортировки по значениям
+	cout << "Кастомная частота: \n";
 	sort(sorted_assembling_values.begin(), sorted_assembling_values.end(),
 		[](const auto& a, const auto& b)
 		{ return a.second < b.second; });
 
 
-	return sorted_assembling_values; // возвращаемп полученный объект
+	return sorted_assembling_values; // возвращаем полученный объект
+}
+
+
+vector<pair<char, double>> general_sorted_assembling_values;
+string filename = "D:/C++ projects/Break_Vigenere_Cipher/statistic.txt"; //путь к текстовику заменить на свой
+// функция для импорта общей статисики частоты символов
+static void loadDataFromFile()
+{
+	ifstream inputFile(filename);
+
+	if (!inputFile.is_open())
+	{
+		cerr << "Не удалось открыть файл: " << filename << endl;
+		return;
+	}
+
+	string line;
+	while (getline(inputFile, line))
+	{
+		stringstream ss(line);
+		char character;
+		double value;
+
+		if (ss >> character >> value)
+			general_sorted_assembling_values.push_back(make_pair(character, value));
+		else
+			cerr << "Неверный формат строки в файле: " << line << endl;
+
+	}
+
+	// сортировка по значениям
+	sort(general_sorted_assembling_values.begin(), general_sorted_assembling_values.end(),
+		[](const auto& a, const auto& b)
+		{ return a.second < b.second; });
+
+	inputFile.close();
 }
 
 

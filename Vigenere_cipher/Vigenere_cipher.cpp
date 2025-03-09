@@ -7,7 +7,7 @@ int main()
 	//std::cout << TYPE_NAME(alphabet[0]) << '\n' << TYPE_NAME(msg[2]) << std::endl;
 	
 	// присваиваем значение функции
-	vector<pair<char, int>> sorted_assembling_values = assembling(); 
+	vector<pair<char, double>> sorted_assembling_values = assembling(); 
 
 	// выводим результат
 	for (const auto& result : sorted_assembling_values) 
@@ -15,9 +15,16 @@ int main()
 	cout << "\n";
 	
 	// проверка, что сборка значений происходит правильно
-	/*int check = count(msg.begin(), msg.end(), 'п');
+	/*double check = double(count(msg.begin(), msg.end(), 'п')) / msg.length();
 	cout << "Кол-во элементов символа: " << check << "\n\n";*/
 	
+	loadDataFromFile(); // используем функцию записи общей частоты из файла
+	cout << "Общая частота: \n";
+	// выводим результат
+	for (const auto& result : general_sorted_assembling_values) 
+		cout << result.first << ": " << result.second << endl;
+	cout << "\n";
+
 	system("pause");
 
 	return 0;
